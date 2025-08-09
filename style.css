@@ -2562,7 +2562,7 @@ h3 {
     .menu-toggle {
         display: block;
         color: #e8e8e8;
-        margin-right: 1px;
+        margin-right: 29px;
     }
 
   .slide-buttons {
@@ -2689,12 +2689,11 @@ h3 {
     margin: 10px 0;
   }
 
-  .slide-buttons button {
-    width: 75px;
-    font-size: 12px;
-    text-align: center;
-  }
-
+  
+    .slide-buttons button {
+        width: 88px;
+        font-size: 12px;
+        text-align:center;}
   /* Adjust search box layout */
   .search-container {
     flex-direction: column;
@@ -2722,10 +2721,12 @@ h3 {
   }
 
   /* Reduce logo size and margin */
-  .centered-logo img {
-    width: 200px;
-    margin-top: 0;
-  }
+
+    .centered-logo img {
+        width: 154px;
+        margin-top: -6px;
+        height: 200px;
+    }
 
   .centered-text {
     font-size: 1, 6rem;
@@ -3345,9 +3346,14 @@ h3 {
     }
 
   .cardabt p {
-    font-size: 0.8em;
-  }
-
+    font-family: 'Abel', sans-serif;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    width: 195px;
+    transform: translatex(12px);
+    margin-top: 19px;
+    text-align: justify;
+}
   .feature {
     flex-direction: column;
     align-items: center;
@@ -3372,9 +3378,14 @@ h3 {
   }
 
   .cardabt p {
-    font-size: 0.8em;
-    text-align: left;
-  }
+    font-family: 'Abel', sans-serif;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    width: 195px;
+    transform: translatex(12px);
+    margin-top: 19px;
+    text-align: justify;
+}
 
   .feature {
     flex-direction: column;
