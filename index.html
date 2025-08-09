@@ -72,6 +72,7 @@
     <div class="overlay-content">
       <div class="centered-logo">
         <img src="images/namaste.png" alt="Namaste" /> <!-- Image path updated -->
+      
       </div>
 
       <div class="slide-buttons">
@@ -618,6 +619,17 @@
   cards.forEach(card => {
     observer.observe(card);
   });
+});
+document.addEventListener("DOMContentLoaded", function() {
+    const imgElement = document.getElementById('imageSlider');
+    const images = ['images/back.png', 'images/download.png']; // Array of images
+    let index = 0;
+
+    // Change image every 2 seconds
+    setInterval(() => {
+        index = (index + 1) % images.length; // Loop through the images array
+        imgElement.src = images[index]; // Change to the next image
+    }, 2000); // 2000ms = 2 seconds
 });
 </script>
 </body>
