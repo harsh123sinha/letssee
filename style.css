@@ -439,7 +439,7 @@ body {
 }
 
 .signup-card.middle {
-  transform: translateY(100%); /* Starts below */
+  transform: translateY(50%); /* Starts below */
 }
 
 /* Add active class when they come into view */
@@ -3156,7 +3156,7 @@ h3 {
 
 @media screen and (max-width: 480px) {
   .property-card {
-    width: 110%;
+    width: 100%;
   }
 }
 /* General reset for box-sizing */
