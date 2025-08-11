@@ -3148,7 +3148,7 @@ h3 {
 
 @media screen and (max-width: 480px) {
   .property-card {
-    width: 100%;
+    width: 112%;
   }
 }
 /* General reset for box-sizing */
