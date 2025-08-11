@@ -548,6 +548,9 @@ body {
   .signup-card p {
     font-size: 0.85em;
   }
+  .slider{
+    margin-left:30px;
+  }
     .signup-card.middle {
     transform: translateY(25%); /* Initially below the screen */
     transition: transform 1s ease-out, opacity 1s ease-out;
