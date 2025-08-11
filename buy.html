@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Properties to Rent</title>
+  <link rel="stylesheet" href="buy.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+  <style>
+    .whatsapp-btn {
+      background-color: #25D366;
+      color: white;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 50px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+      transition: background-color 0.3s ease;
+      text-decoration: none;
+      margin-top: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .whatsapp-btn:hover {
+      background-color: #1ebe5d;
+      color: white;
+      text-decoration: none;
+    }
+
+    .whatsapp-btn i {
+      font-size: 18px;
+    }
+  </style>
+  <script>
+    var isLoggedIn=isLoggedIn;
+  </script>
+</head>
+<body>
+<header>
+  <div class="logo">
+    <img src="images/logo.png" alt="Logo" />
+    <h1>Harsh To-Let Services</h1>
+  </div>
+  <nav>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="javascript:void(0);" class="back-btn active"onclick="window.history.back()">Back</a></li>
+        <li><a href="/login" class="nav-item">Login</a></li>
+        <li><a href="#contact" class="nav-item">Contact</a></li>
+    </ul>
+    <div class="menu-toggle" id="menuToggle">&#9776;</div>
+  </nav>
+</header>
+
+<h1 class="main-heading">Properties to Rent</h1>
+
+<!-- Static Property Listings -->
+<div class="property-section">
+  <h2>1 BHK</h2>
+  <div class="scroll-container">
+    <button class="scroll-btn left" onclick="scrollLeft('scroll-rent-1')">&#8249;</button>
+    <div class="card-row" id="scroll-rent-1">
+      <div class="card">
+        <a href="/property/1" class="card-link">
+          <img src="image.png" alt="Property 1" />
+          <h3>Property 1</h3>
+          <p class="price">₹15,000 /month</p>
+          <p class="location">Kankarbagh</p>
+          <p class="description">A nice 1 BHK apartment with good amenities...</p>
+          <!-- WhatsApp Button -->
+          <a href="https://wa.me/?text=🏠%20*Property%201*%0A%0A📍%20Location:%20Kankarbagh%0A💵%20Price:%20₹15,000%0A🛏️%20BHK:%201%0A%0AClick%20to%20know%20more:%20http://yourdomain.com/property/1" class="whatsapp-btn">
+            <i class="fab fa-whatsapp"></i> Share on WhatsApp
+          </a>
+        </a>
+      </div>
+    </div>
+    <button class="scroll-btn right" onclick="scrollRight('scroll-rent-1')">&#8250;</button>
+  </div>
+</div>
+
+<div class="property-section">
+  <h2>2 BHK</h2>
+  <div class="scroll-container">
+    <button class="scroll-btn left" onclick="scrollLeft('scroll-rent-2')">&#8249;</button>
+    <div class="card-row" id="scroll-rent-2">
+      <div class="card">
+        <a href="/property/2" class="card-link">
+          <img src="image.png" alt="Property 2" />
+          <h3>Property 2</h3>
+          <p class="price">₹20,000 /month</p>
+          <p class="location">Bailey Road</p>
+          <p class="description">A spacious 2 BHK with modern interiors...</p>
+          <!-- WhatsApp Button -->
+          <a href="https://wa.me/?text=🏠%20*Property%202*%0A%0A📍%20Location:%20Bailey%20Road%0A💵%20Price:%20₹20,000%0A🛏️%20BHK:%202%0A%0AClick%20to%20know%20more:%20http://yourdomain.com/property/2" class="whatsapp-btn">
+            <i class="fab fa-whatsapp"></i> Share on WhatsApp
+          </a>
+        </a>
+      </div>
+    </div>
+    <button class="scroll-btn right" onclick="scrollRight('scroll-rent-2')">&#8250;</button>
+  </div>
+</div>
+<div class="property-section">
+  <h2>2 BHK</h2>
+  <div class="scroll-container">
+    <button class="scroll-btn left" onclick="scrollLeft('scroll-rent-2')">&#8249;</button>
+    <div class="card-row" id="scroll-rent-2">
+      <div class="card">
+        <a href="/property/2" class="card-link">
+          <img src="image.png" alt="Property 2" />
+          <h3>Property 2</h3>
+          <p class="price">₹20,000 /month</p>
+          <p class="location">Bailey Road</p>
+          <p class="description">A spacious 2 BHK with modern interiors...</p>
+          <!-- WhatsApp Button -->
+          <a href="https://wa.me/?text=🏠%20*Property%202*%0A%0A📍%20Location:%20Bailey%20Road%0A💵%20Price:%20₹20,000%0A🛏️%20BHK:%202%0A%0AClick%20to%20know%20more:%20http://yourdomain.com/property/2" class="whatsapp-btn">
+            <i class="fab fa-whatsapp"></i> Share on WhatsApp
+          </a>
+        </a>
+      </div>
+    </div>
+    <button class="scroll-btn right" onclick="scrollRight('scroll-rent-2')">&#8250;</button>
+  </div>
+</div>
+<div class="property-section">
+  <h2>2 BHK</h2>
+  <div class="scroll-container">
+    <button class="scroll-btn left" onclick="scrollLeft('scroll-rent-2')">&#8249;</button>
+    <div class="card-row" id="scroll-rent-2">
+      <div class="card">
+        <a href="/property/2" class="card-link">
+          <img src="image.png" alt="Property 2" />
+          <h3>Property 2</h3>
+          <p class="price">₹20,000 /month</p>
+          <p class="location">Bailey Road</p>
+          <p class="description">A spacious 2 BHK with modern interiors...</p>
+          <!-- WhatsApp Button -->
+          <a href="https://wa.me/?text=🏠%20*Property%202*%0A%0A📍%20Location:%20Bailey%20Road%0A💵%20Price:%20₹20,000%0A🛏️%20BHK:%202%0A%0AClick%20to%20know%20more:%20http://yourdomain.com/property/2" class="whatsapp-btn">
+            <i class="fab fa-whatsapp"></i> Share on WhatsApp
+          </a>
+        </a>
+      </div>
+    </div>
+    <button class="scroll-btn right" onclick="scrollRight('scroll-rent-2')">&#8250;</button>
+  </div>
+</div>
+<div class="property-section">
+  <h2>2 BHK</h2>
+  <div class="scroll-container">
+    <button class="scroll-btn left" onclick="scrollLeft('scroll-rent-2')">&#8249;</button>
+    <div class="card-row" id="scroll-rent-2">
+      <div class="card">
+        <a href="/property/2" class="card-link">
+          <img src="image.png" alt="Property 2" />
+          <h3>Property 2</h3>
+          <p class="price">₹20,000 /month</p>
+          <p class="location">Bailey Road</p>
+          <p class="description">A spacious 2 BHK with modern interiors...</p>
+          <!-- WhatsApp Button -->
+          <a href="https://wa.me/?text=🏠%20*Property%202*%0A%0A📍%20Location:%20Bailey%20Road%0A💵%20Price:%20₹20,000%0A🛏️%20BHK:%202%0A%0AClick%20to%20know%20more:%20http://yourdomain.com/property/2" class="whatsapp-btn">
+            <i class="fab fa-whatsapp"></i> Share on WhatsApp
+          </a>
+        </a>
+      </div>
+    </div>
+    <button class="scroll-btn right" onclick="scrollRight('scroll-rent-2')">&#8250;</button>
+  </div>
+</div>
+<div class="property-section">
+  <h2>2 BHK</h2>
+  <div class="scroll-container">
+    <button class="scroll-btn left" onclick="scrollLeft('scroll-rent-2')">&#8249;</button>
+    <div class="card-row" id="scroll-rent-2">
+      <div class="card">
+        <a href="/property/2" class="card-link">
+          <img src="image.png" alt="Property 2" />
+          <h3>Property 2</h3>
+          <p class="price">₹20,000 /month</p>
+          <p class="location">Bailey Road</p>
+          <p class="description">A spacious 2 BHK with modern interiors...</p>
+          <!-- WhatsApp Button -->
+          <a href="https://wa.me/?text=🏠%20*Property%202*%0A%0A📍%20Location:%20Bailey%20Road%0A💵%20Price:%20₹20,000%0A🛏️%20BHK:%202%0A%0AClick%20to%20know%20more:%20http://yourdomain.com/property/2" class="whatsapp-btn">
+            <i class="fab fa-whatsapp"></i> Share on WhatsApp
+          </a>
+        </a>
+      </div>
+    </div>
+    <button class="scroll-btn right" onclick="scrollRight('scroll-rent-2')">&#8250;</button>
+  </div>
+</div>
+<div class="property-section">
+  <h2>2 BHK</h2>
+  <div class="scroll-container">
+    <button class="scroll-btn left" onclick="scrollLeft('scroll-rent-2')">&#8249;</button>
+    <div class="card-row" id="scroll-rent-2">
+      <div class="card">
+        <a href="/property/2" class="card-link">
+          <img src="image.png" alt="Property 2" />
+          <h3>Property 2</h3>
+          <p class="price">₹20,000 /month</p>
+          <p class="location">Bailey Road</p>
+          <p class="description">A spacious 2 BHK with modern interiors...</p>
+          <!-- WhatsApp Button -->
+          <a href="https://wa.me/?text=🏠%20*Property%202*%0A%0A📍%20Location:%20Bailey%20Road%0A💵%20Price:%20₹20,000%0A🛏️%20BHK:%202%0A%0AClick%20to%20know%20more:%20http://yourdomain.com/property/2" class="whatsapp-btn">
+            <i class="fab fa-whatsapp"></i> Share on WhatsApp
+          </a>
+        </a>
+      </div>
+    </div>
+    <button class="scroll-btn right" onclick="scrollRight('scroll-rent-2')">&#8250;</button>
+  </div>
+</div>
+<div class="property-section">
+  <h2>2 BHK</h2>
+  <div class="scroll-container">
+    <button class="scroll-btn left" onclick="scrollLeft('scroll-rent-2')">&#8249;</button>
+    <div class="card-row" id="scroll-rent-2">
+      <div class="card">
+        <a href="/property/2" class="card-link">
+          <img src="image.png" alt="Property 2" />
+          <h3>Property 2</h3>
+          <p class="price">₹20,000 /month</p>
+          <p class="location">Bailey Road</p>
+          <p class="description">A spacious 2 BHK with modern interiors...</p>
+          <!-- WhatsApp Button -->
+          <a href="https://wa.me/?text=🏠%20*Property%202*%0A%0A📍%20Location:%20Bailey%20Road%0A💵%20Price:%20₹20,000%0A🛏️%20BHK:%202%0A%0AClick%20to%20know%20more:%20http://yourdomain.com/property/2" class="whatsapp-btn">
+            <i class="fab fa-whatsapp"></i> Share on WhatsApp
+          </a>
+        </a>
+      </div>
+    </div>
+    <button class="scroll-btn right" onclick="scrollRight('scroll-rent-2')">&#8250;</button>
+  </div>
+</div>
+<div class="property-section">
+  <h2>2 BHK</h2>
+  <div class="scroll-container">
+    <button class="scroll-btn left" onclick="scrollLeft('scroll-rent-2')">&#8249;</button>
+    <div class="card-row" id="scroll-rent-2">
+      <div class="card">
+        <a href="/property/2" class="card-link">
+          <img src="image.png" alt="Property 2" />
+          <h3>Property 2</h3>
+          <p class="price">₹20,000 /month</p>
+          <p class="location">Bailey Road</p>
+          <p class="description">A spacious 2 BHK with modern interiors...</p>
+          <!-- WhatsApp Button -->
+          <a href="https://wa.me/?text=🏠%20*Property%202*%0A%0A📍%20Location:%20Bailey%20Road%0A💵%20Price:%20₹20,000%0A🛏️%20BHK:%202%0A%0AClick%20to%20know%20more:%20http://yourdomain.com/property/2" class="whatsapp-btn">
+            <i class="fab fa-whatsapp"></i> Share on WhatsApp
+          </a>
+        </a>
+      </div>
+    </div>
+    <button class="scroll-btn right" onclick="scrollRight('scroll-rent-2')">&#8250;</button>
+  </div>
+</div>
+<div class="property-section">
+  <h2>2 BHK</h2>
+  <div class="scroll-container">
+    <button class="scroll-btn left" onclick="scrollLeft('scroll-rent-2')">&#8249;</button>
+    <div class="card-row" id="scroll-rent-2">
+      <div class="card">
+        <a href="/property/2" class="card-link">
+          <img src="image.png" alt="Property 2" />
+          <h3>Property 2</h3>
+          <p class="price">₹20,000 /month</p>
+          <p class="location">Bailey Road</p>
+          <p class="description">A spacious 2 BHK with modern interiors...</p>
+          <!-- WhatsApp Button -->
+          <a href="https://wa.me/?text=🏠%20*Property%202*%0A%0A📍%20Location:%20Bailey%20Road%0A💵%20Price:%20₹20,000%0A🛏️%20BHK:%202%0A%0AClick%20to%20know%20more:%20http://yourdomain.com/property/2" class="whatsapp-btn">
+            <i class="fab fa-whatsapp"></i> Share on WhatsApp
+          </a>
+        </a>
+      </div>
+    </div>
+    <button class="scroll-btn right" onclick="scrollRight('scroll-rent-2')">&#8250;</button>
+  </div>
+</div>
+<div class="property-section">
+  <h2>2 BHK</h2>
+  <div class="scroll-container">
+    <button class="scroll-btn left" onclick="scrollLeft('scroll-rent-2')">&#8249;</button>
+    <div class="card-row" id="scroll-rent-2">
+      <div class="card">
+        <a href="/property/2" class="card-link">
+          <img src="image.png" alt="Property 2" />
+          <h3>Property 2</h3>
+          <p class="price">₹20,000 /month</p>
+          <p class="location">Bailey Road</p>
+          <p class="description">A spacious 2 BHK with modern interiors...</p>
+          <!-- WhatsApp Button -->
+          <a href="https://wa.me/?text=🏠%20*Property%202*%0A%0A📍%20Location:%20Bailey%20Road%0A💵%20Price:%20₹20,000%0A🛏️%20BHK:%202%0A%0AClick%20to%20know%20more:%20http://yourdomain.com/property/2" class="whatsapp-btn">
+            <i class="fab fa-whatsapp"></i> Share on WhatsApp
+          </a>
+        </a>
+      </div>
+    </div>
+    <button class="scroll-btn right" onclick="scrollRight('scroll-rent-2')">&#8250;</button>
+  </div>
+</div>
+<div class="property-section">
+  <h2>2 BHK</h2>
+  <div class="scroll-container">
+    <button class="scroll-btn left" onclick="scrollLeft('scroll-rent-2')">&#8249;</button>
+    <div class="card-row" id="scroll-rent-2">
+      <div class="card">
+        <a href="/property/2" class="card-link">
+          <img src="image.png" alt="Property 2" />
+          <h3>Property 2</h3>
+          <p class="price">₹20,000 /month</p>
+          <p class="location">Bailey Road</p>
+          <p class="description">A spacious 2 BHK with modern interiors...</p>
+          <!-- WhatsApp Button -->
+          <a href="https://wa.me/?text=🏠%20*Property%202*%0A%0A📍%20Location:%20Bailey%20Road%0A💵%20Price:%20₹20,000%0A🛏️%20BHK:%202%0A%0AClick%20to%20know%20more:%20http://yourdomain.com/property/2" class="whatsapp-btn">
+            <i class="fab fa-whatsapp"></i> Share on WhatsApp
+          </a>
+        </a>
+      </div>
+    </div>
+    <button class="scroll-btn right" onclick="scrollRight('scroll-rent-2')">&#8250;</button>
+  </div>
+</div>
+<div class="property-section">
+  <h2>2 BHK</h2>
+  <div class="scroll-container">
+    <button class="scroll-btn left" onclick="scrollLeft('scroll-rent-2')">&#8249;</button>
+    <div class="card-row" id="scroll-rent-2">
+      <div class="card">
+        <a href="/property/2" class="card-link">
+          <img src="image.png" alt="Property 2" />
+          <h3>Property 2</h3>
+          <p class="price">₹20,000 /month</p>
+          <p class="location">Bailey Road</p>
+          <p class="description">A spacious 2 BHK with modern interiors...</p>
+          <!-- WhatsApp Button -->
+          <a href="https://wa.me/?text=🏠%20*Property%202*%0A%0A📍%20Location:%20Bailey%20Road%0A💵%20Price:%20₹20,000%0A🛏️%20BHK:%202%0A%0AClick%20to%20know%20more:%20http://yourdomain.com/property/2" class="whatsapp-btn">
+            <i class="fab fa-whatsapp"></i> Share on WhatsApp
+          </a>
+        </a>
+      </div>
+    </div>
+    <button class="scroll-btn right" onclick="scrollRight('scroll-rent-2')">&#8250;</button>
+  </div>
+</div>
+<div class="property-section">
+  <h2>2 BHK</h2>
+  <div class="scroll-container">
+    <button class="scroll-btn left" onclick="scrollLeft('scroll-rent-2')">&#8249;</button>
+    <div class="card-row" id="scroll-rent-2">
+      <div class="card">
+        <a href="/property/2" class="card-link">
+          <img src="image.png" alt="Property 2" />
+          <h3>Property 2</h3>
+          <p class="price">₹20,000 /month</p>
+          <p class="location">Bailey Road</p>
+          <p class="description">A spacious 2 BHK with modern interiors...</p>
+          <!-- WhatsApp Button -->
+          <a href="https://wa.me/?text=🏠%20*Property%202*%0A%0A📍%20Location:%20Bailey%20Road%0A💵%20Price:%20₹20,000%0A🛏️%20BHK:%202%0A%0AClick%20to%20know%20more:%20http://yourdomain.com/property/2" class="whatsapp-btn">
+            <i class="fab fa-whatsapp"></i> Share on WhatsApp
+          </a>
+        </a>
+      </div>
+    </div>
+    <button class="scroll-btn right" onclick="scrollRight('scroll-rent-2')">&#8250;</button>
+  </div>
+</div>
+<div class="property-section">
+  <h2>2 BHK</h2>
+  <div class="scroll-container">
+    <button class="scroll-btn left" onclick="scrollLeft('scroll-rent-2')">&#8249;</button>
+    <div class="card-row" id="scroll-rent-2">
+      <div class="card">
+        <a href="/property/2" class="card-link">
+          <img src="image.png" alt="Property 2" />
+          <h3>Property 2</h3>
+          <p class="price">₹20,000 /month</p>
+          <p class="location">Bailey Road</p>
+          <p class="description">A spacious 2 BHK with modern interiors...</p>
+          <!-- WhatsApp Button -->
+          <a href="https://wa.me/?text=🏠%20*Property%202*%0A%0A📍%20Location:%20Bailey%20Road%0A💵%20Price:%20₹20,000%0A🛏️%20BHK:%202%0A%0AClick%20to%20know%20more:%20http://yourdomain.com/property/2" class="whatsapp-btn">
+            <i class="fab fa-whatsapp"></i> Share on WhatsApp
+          </a>
+        </a>
+      </div>
+    </div>
+    <button class="scroll-btn right" onclick="scrollRight('scroll-rent-2')">&#8250;</button>
+  </div>
+</div>
+<div class="property-section">
+  <h2>2 BHK</h2>
+  <div class="scroll-container">
+    <button class="scroll-btn left" onclick="scrollLeft('scroll-rent-2')">&#8249;</button>
+    <div class="card-row" id="scroll-rent-2">
+      <div class="card">
+        <a href="/property/2" class="card-link">
+          <img src="image.png" alt="Property 2" />
+          <h3>Property 2</h3>
+          <p class="price">₹20,000 /month</p>
+          <p class="location">Bailey Road</p>
+          <p class="description">A spacious 2 BHK with modern interiors...</p>
+          <!-- WhatsApp Button -->
+          <a href="https://wa.me/?text=🏠%20*Property%202*%0A%0A📍%20Location:%20Bailey%20Road%0A💵%20Price:%20₹20,000%0A🛏️%20BHK:%202%0A%0AClick%20to%20know%20more:%20http://yourdomain.com/property/2" class="whatsapp-btn">
+            <i class="fab fa-whatsapp"></i> Share on WhatsApp
+          </a>
+        </a>
+      </div>
+    </div>
+    <button class="scroll-btn right" onclick="scrollRight('scroll-rent-2')">&#8250;</button>
+  </div>
+</div>
+<div class="property-section">
+  <h2>2 BHK</h2>
+  <div class="scroll-container">
+    <button class="scroll-btn left" onclick="scrollLeft('scroll-rent-2')">&#8249;</button>
+    <div class="card-row" id="scroll-rent-2">
+      <div class="card">
+        <a href="/property/2" class="card-link">
+          <img src="image.png" alt="Property 2" />
+          <h3>Property 2</h3>
+          <p class="price">₹20,000 /month</p>
+          <p class="location">Bailey Road</p>
+          <p class="description">A spacious 2 BHK with modern interiors...</p>
+          <!-- WhatsApp Button -->
+          <a href="https://wa.me/?text=🏠%20*Property%202*%0A%0A📍%20Location:%20Bailey%20Road%0A💵%20Price:%20₹20,000%0A🛏️%20BHK:%202%0A%0AClick%20to%20know%20more:%20http://yourdomain.com/property/2" class="whatsapp-btn">
+            <i class="fab fa-whatsapp"></i> Share on WhatsApp
+          </a>
+        </a>
+      </div>
+    </div>
+    <button class="scroll-btn right" onclick="scrollRight('scroll-rent-2')">&#8250;</button>
+  </div>
+</div>
+<div class="property-section">
+  <h2>2 BHK</h2>
+  <div class="scroll-container">
+    <button class="scroll-btn left" onclick="scrollLeft('scroll-rent-2')">&#8249;</button>
+    <div class="card-row" id="scroll-rent-2">
+      <div class="card">
+        <a href="/property/2" class="card-link">
+          <img src="image.png" alt="Property 2" />
+          <h3>Property 2</h3>
+          <p class="price">₹20,000 /month</p>
+          <p class="location">Bailey Road</p>
+          <p class="description">A spacious 2 BHK with modern interiors...</p>
+          <!-- WhatsApp Button -->
+          <a href="https://wa.me/?text=🏠%20*Property%202*%0A%0A📍%20Location:%20Bailey%20Road%0A💵%20Price:%20₹20,000%0A🛏️%20BHK:%202%0A%0AClick%20to%20know%20more:%20http://yourdomain.com/property/2" class="whatsapp-btn">
+            <i class="fab fa-whatsapp"></i> Share on WhatsApp
+          </a>
+        </a>
+      </div>
+    </div>
+    <button class="scroll-btn right" onclick="scrollRight('scroll-rent-2')">&#8250;</button>
+  </div>
+</div>
+
+<div class="property-section">
+  <h2>3 BHK</h2>
+  <div class="scroll-container">
+    <button class="scroll-btn left" onclick="scrollLeft('scroll-rent-3')">&#8249;</button>
+    <div class="card-row" id="scroll-rent-3">
+      <div class="card">
+        <a href="/property/3" class="card-link">
+          <img src="/images/image.png" alt="Property 3" />
+          <h3>Property 3</h3>
+          <p class="price">₹30,000 /month</p>
+          <p class="location">Rajiv Nagar</p>
+          <p class="description">A luxurious 3 BHK apartment with excellent facilities...</p>
+          <!-- WhatsApp Button -->
+          <a href="https://wa.me/?text=🏠%20*Property%203*%0A%0A📍%20Location:%20Rajiv%20Nagar%0A💵%20Price:%20₹30,000%0A🛏️%20BHK:%203%0A%0AClick%20to%20know%20more:%20http://yourdomain.com/property/3" class="whatsapp-btn">
+            <i class="fab fa-whatsapp"></i> Share on WhatsApp
+          </a>
+        </a>
+      </div>
+    </div>
+    <button class="scroll-btn right" onclick="scrollRight('scroll-rent-3')">&#8250;</button>
+  </div>
+</div>
+
+<!-- Footer -->
+<section id="contact" class="footer">
+  <div class="footer-container">
+    <div class="footer-column1">
+      <div class="logo1">
+        <img src="images/logo.png" alt="Logo" />
+        <h3>Harsh To-Let Services</h3>
+      </div>
+      <p>आओ अपना घर देखें <br> Feel like your home.</p>
+    </div>
+    <div class="footer-column">
+      <h3>Opening Time</h3>
+      <ul class="hours">
+        <li>Mon - Fri: 9:00AM - 6:00PM</li>
+        <li>Saturday: 10:00AM - 4:00PM</li>
+        <li>Sunday: Closed</li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h3>Social Media</h3>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+    <div class="footer-column">
+      <h3>Contact Info</h3>
+      <ul>
+        <li><i class="fas fa-phone"></i> +91 9386446282</li>
+        <li><i class="fas fa-phone"></i> +91 8210078910</li>
+        <li><i class="fas fa-map-marker-alt"></i> Rajiv Nagar, Road No 19, Below BNB Bank</li>
+        <li><i class="fas fa-map-marker-alt"></i> Ashiyana Nagar, Below Kotak Mahindra Bank</li>
+        <li><i class="fas fa-envelope"></i> harsh@example.com</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
+    <style>
+      
+.footer {
+  background: linear-gradient(45deg, #a4150a, #000000);
+  color: #004cbf;
+  padding: 40px 20px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1600px;
+  margin: auto;
+}
+
+.footer-column {
+  flex: 1 1 220px;
+  margin: 25px;
+  /* gap:100px; */
+}
+
+.footer-column1 {
+  flex: 1 1 373px;
+  margin: 20px;
+}
+
+.footer-column1 h3 {
+  color: rgb(255, 244, 244);
+  font-size: 25px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ff0000;
+  padding-bottom: 10px;
+}
+
+.footer-column h3 {
+  color: rgb(255, 244, 244);
+  font-size: 15px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ff0000;
+  padding-bottom: 10px;
+}
+
+.footer-column1 p {
+  font-size: 19px;
+  line-height: 1.6;
+  color: #feffff;
+  text-align: justify;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+  color: #fffefe;
+  font-size: 13px;
+}
+
+.footer-column ul li i {
+  margin-right: 8px;
+  color: #fff;
+}
+
+.footer-column ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+  color: #fff;
+}
+
+.social-icons {
+  display: flex;
+  gap: 30px;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: #e3cc00;
+  font-size: 20px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #000000;
+  transform: scale(1.2);
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid #333;
+  padding-top: 15px;
+  font-size: 14px;
+  color: #fbf6f6;
+}
+
+.logo-container-vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.logo-img-vertical {
+  width: 50px;
+  height: 50px;
+}
+
+.logo-text-vertical {
+  font-size: 25px;
+  color: #fff;
+  border-bottom: 2px solid red;
+  margin: 10px 0 5px;
+  text-align: center;
+}
+
+.tagline-vertical {
+  font-size: 18px;
+  color: #fff;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.logo1 {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo1 img {
+  width: 80px;
+  height: auto;
+}
+
+
+h3 {
+  font-size: 25px;
+  font-family: 'Abel', sans-serif;
+  color: rgb(0 0 0);
+  text-shadow: 0 0 2px rgb(255, 255, 255);
+  transform: translatey(10px);
+  margin-top: 10px;
+}
+    </style>
+
+<script>
+  function scrollLeft(id) {
+    const container = document.getElementById(id);
+    if (container) container.scrollBy({ left: -300, behavior: 'smooth' });
+  }
+
+  function scrollRight(id) {
+    const container = document.getElementById(id);
+    if (container) container.scrollBy({ left: 300, behavior: 'smooth' });
+  }
+
+  function handleWhatsAppClick() {
+    if (!isLoggedIn) {
+      alert("You need to login first. Redirecting to login page...");
+      window.location.href = '/login';  // Redirect to login page
+    } else {
+      // Open WhatsApp if the user is logged in
+      const message = document.getElementById("whatsapp-btn-not-logged-in").getAttribute("data-message");
+      const url = `https://wa.me/?text=${encodeURIComponent(message)}`;
+      window.open(url, '_blank');
+    }
+  }
+  document.addEventListener("DOMContentLoaded", () => {
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    // Toggle the mobile navigation
+    menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("show");
+    });
+
+    // Active class for navigation items
+    const navItems = document.querySelectorAll(".nav-item");
+    navItems.forEach(item => {
+        item.addEventListener("click", () => {
+            navItems.forEach(el => el.classList.remove("active"));
+            item.classList.add("active");
+        });
+    });
+});
+const SCROLL_AMOUNT = 300;
+
+function scrollRight(id) {
+  const container = document.getElementById(id);
+  console.log("RIGHT before:", container.scrollLeft);
+  container.scrollTo({
+    left: container.scrollLeft + SCROLL_AMOUNT,
+    behavior: 'smooth'
+  });
+  setTimeout(() => {
+    console.log("RIGHT after:", container.scrollLeft);
+    updateScrollButtons(id);
+  }, 400);
+}
+
+function scrollLeft(id) {
+  const container = document.getElementById(id);
+  console.log("LEFT before:", container.scrollLeft);
+  container.scrollTo({
+    left: container.scrollLeft - SCROLL_AMOUNT,
+    behavior: 'smooth'
+  });
+  setTimeout(() => {
+    console.log("LEFT after:", container.scrollLeft);
+    updateScrollButtons(id);
+  }, 400);
+}
+
+function updateScrollButtons(id) {
+  const container = document.getElementById(id);
+  const leftBtn = container.parentElement.querySelector('.scroll-btn.left');
+  const rightBtn = container.parentElement.querySelector('.scroll-btn.right');
+
+  const atStart = container.scrollLeft <= 0;
+  const atEnd = container.scrollLeft + container.clientWidth >= container.scrollWidth - 1;
+
+  leftBtn.disabled = atStart;
+  rightBtn.disabled = atEnd;
+  console.log("ScrollLeft:", container.scrollLeft, "ScrollWidth:", container.scrollWidth);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    // Toggle the mobile navigation
+    menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("show");
+    });
+
+    // Active class for navigation items
+    const navItems = document.querySelectorAll(".nav-item");
+    navItems.forEach(item => {
+        item.addEventListener("click", () => {
+            navItems.forEach(el => el.classList.remove("active"));
+            item.classList.add("active");
+        });
+    });
+});
+
+
+function initScroll(id) {
+  const container = document.getElementById(id);
+  updateScrollButtons(id);
+  container.addEventListener('scroll', () => updateScrollButtons(id));
+}
+
+function handleWhatsAppClick() {
+  // Check if the user is logged in
+  if (!isLoggedIn) {
+    // Show alert if the user is not logged in
+    const userResponse = confirm("You need to log in first. Do you want to login or sign up?");
+    
+    if (userResponse) {
+      // Redirect to the login page if the user clicks "OK"
+      window.location.href = '/login';  // Redirect to login page
+    } else {
+      // Redirect to the signup page if the user clicks "Cancel"
+      window.location.href = '/signup'; // Redirect to signup page
+    }
+  } else {
+    // Open WhatsApp if the user is logged in
+    const message = document.getElementById("whatsapp-btn-not-logged-in").getAttribute("data-message");
+    const url = `https://wa.me/?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
+  }
+}
+
+
+</script>
+<script src="/js/buy.js"></script>
+
+</body>
+</html>

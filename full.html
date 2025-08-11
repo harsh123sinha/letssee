@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Property Details</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      font: 1.5em sans-serif;
+      margin: 0;
+      background: #f2f2f2;
+      color: #333;
+    }
+
+    .nav {
+      background: #2c3e50;
+      padding: 15px 30px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    .nav a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 500;
+      margin-left: 20px;
+    }
+
+    .back-button {
+      background-color: #3498db;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .back-button:hover {
+      background-color: #2980b9;
+    }
+
+    .container {
+      max-width: 1401px;
+      margin: auto;
+      padding: 20px;
+      background: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .property-display {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+
+    .thumbnails {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .thumbnails img {
+      width: 70px;
+      height: 70px;
+      object-fit: cover;
+      cursor: pointer;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+      transition: transform 0.2s;
+    }
+
+    .thumbnails img:hover {
+      transform: scale(1.05);
+    }
+
+    .main-image {
+      width: 400px;
+      height: 300px;
+      border: 2px solid #333;
+      border-radius: 6px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .main-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    .zoom-box {
+      width: 400px;
+      height: 300px;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      display: none;
+      background-repeat: no-repeat;
+      background-size: 800px 600px;
+      margin-top: 10px;
+    }
+
+    .info-or-zoom {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .price {
+      font-size: 1.4rem;
+      color: #e74c3c;
+      margin-bottom: 10px;
+    }
+
+    .desc {
+      font-size: 1.5rem;
+    }
+
+    .whatsapp-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background-color: #25D366;
+      color: white;
+      font-weight: 500;
+      font-size: 14px;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      margin-top: 10px;
+      width: fit-content;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .whatsapp-button:hover {
+      background-color: #1ebc59;
+    }
+
+    .whatsapp-button i {
+      font-size: 16px;
+    }
+
+    .random-section {
+      margin-top: 40px;
+    }
+
+    .random-cards {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 20px;
+      overflow-x: auto;
+      padding-bottom: 10px;
+    }
+
+    .random-card {
+      flex: 0 0 auto;
+      width: 250px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      padding: 10px;
+    }
+
+    .random-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    .random-card h3 {
+      margin: 10px 0 5px;
+      font-size: 18px;
+    }
+
+    .random-card .location,
+    .random-card .price {
+      font-size: 14px;
+      color: #555;
+    }
+
+    .random-card a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    @media (max-width: 768px) {
+      .property-display {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .main-image,
+      .zoom-box,
+      .info-or-zoom {
+        width: 90%;
+      }
+
+      .zoom-box {
+        display: none !important;
+      }
+    }
+
+    .listed-by {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 20px;
+      font-size: 1.5rem;
+      color: yellow;
+    }
+
+    .listed-by span {
+      padding: 5px 10px;
+      font-weight: bold;
+      color: rgb(0, 16, 80);
+      border-radius: 5px;
+      font-size: 1.2rem;
+    }
+
+    .listed-by span:first-child {
+      background-color: yellow;
+      opacity: 1;
+    }
+
+    .listed-by span:last-child {
+      padding: 8px 12px;
+      font-weight: bold;
+      font-size: 1.4rem;
+    }
+
+    .listed-by span.owner {
+      background-color: blue;
+      opacity: 0.8;
+    }
+
+    .listed-by span.agent {
+      background-color: red;
+      opacity: 0.8;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <div class="nav">
+    <a href="/" class="nav-item active">Home</a>
+    <a href="javascript:history.back()" class="back-button">Back</a>
+  </div>
+
+  <div class="container">
+    <h1>Property Title</h1>
+    <div class="listed-by">
+      <span>Listed by: Owner</span>
+      <span class="owner">John Doe</span>
+    </div>
+
+    <!-- Static Image URL (image.png) -->
+    <div class="property-display">
+      <!-- Thumbnails -->
+      <div class="thumbnails">
+        <img src="image.png" alt="thumb1" onclick="setMainImage('image.png')">
+        <img src="image.png" alt="thumb2" onclick="setMainImage('image.png')">
+        <img src="image.png" alt="thumb3" onclick="setMainImage('image.png')">
+      </div>
+
+      <!-- Main Image -->
+      <div class="main-image" id="mainImageContainer">
+        <img id="mainImage" src="image.png" alt="Main Property Image">
+      </div>
+
+      <!-- Info -->
+      <div class="info-or-zoom">
+        <div id="zoomView" class="zoom-box"></div>
+        <div>
+          <div class="price">₹15,000</div>
+          <div class="desc">Beautiful 2 BHK apartment with great amenities.</div>
+          <div><strong>BHK:</strong> 2</div>
+          <div><strong>Location:</strong> Kankarbagh, Patna</div>
+          <div><strong>Type:</strong> Rent</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/919334072476?text=Property%20Details%20Here" target="_blank" class="whatsapp-button">
+      <i class="fab fa-whatsapp"></i> Share on WhatsApp
+    </a>
+
+    <!-- Random Properties -->
+    <div class="random-section">
+      <h2>Other Properties You Might Like</h2>
+      <div class="random-cards">
+        <div class="random-card">
+          <a href="/property/1">
+            <img src="image.png" alt="Random Property 1">
+            <h3>Property 1</h3>
+            <div class="price">₹18,000</div>
+            <div class="location">Rajiv Nagar</div>
+          </a>
+          <a href="https://wa.me/919334072476?text=Random%20Property%20Details%20Here" target="_blank" class="whatsapp-button">
+            <i class="fab fa-whatsapp"></i> Share on WhatsApp
+          </a>
+        </div>
+        <div class="random-card">
+          <a href="/property/2">
+            <img src="image.png" alt="Random Property 2">
+            <h3>Property 2</h3>
+            <div class="price">₹22,000</div>
+            <div class="location">Bailey Road</div>
+          </a>
+          <a href="https://wa.me/919334072476?text=Random%20Property%20Details%20Here" target="_blank" class="whatsapp-button">
+            <i class="fab fa-whatsapp"></i> Share on WhatsApp
+          </a>
+        </div>
+      </div>
+        <div class="random-card">
+          <a href="/property/2">
+            <img src="image.png" alt="Random Property 2">
+            <h3>Property 2</h3>
+            <div class="price">₹22,000</div>
+            <div class="location">Bailey Road</div>
+          </a>
+          <a href="https://wa.me/919334072476?text=Random%20Property%20Details%20Here" target="_blank" class="whatsapp-button">
+            <i class="fab fa-whatsapp"></i> Share on WhatsApp
+          </a>
+        </div>
+      </div>
+        <div class="random-card">
+          <a href="/property/2">
+            <img src="image.png" alt="Random Property 2">
+            <h3>Property 2</h3>
+            <div class="price">₹22,000</div>
+            <div class="location">Bailey Road</div>
+          </a>
+          <a href="https://wa.me/919334072476?text=Random%20Property%20Details%20Here" target="_blank" class="whatsapp-button">
+            <i class="fab fa-whatsapp"></i> Share on WhatsApp
+          </a>
+        </div>
+      </div>
+        <div class="random-card">
+          <a href="/property/2">
+            <img src="image.png" alt="Random Property 2">
+            <h3>Property 2</h3>
+            <div class="price">₹22,000</div>
+            <div class="location">Bailey Road</div>
+          </a>
+          <a href="https://wa.me/919334072476?text=Random%20Property%20Details%20Here" target="_blank" class="whatsapp-button">
+            <i class="fab fa-whatsapp"></i> Share on WhatsApp
+          </a>
+        </div>
+      </div>
+        <div class="random-card">
+          <a href="/property/2">
+            <img src="image.png" alt="Random Property 2">
+            <h3>Property 2</h3>
+            <div class="price">₹22,000</div>
+            <div class="location">Bailey Road</div>
+          </a>
+          <a href="https://wa.me/919334072476?text=Random%20Property%20Details%20Here" target="_blank" class="whatsapp-button">
+            <i class="fab fa-whatsapp"></i> Share on WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const mainImage = document.getElementById('mainImage');
+    const zoomView = document.getElementById('zoomView');
+    const container = document.getElementById('mainImageContainer');
+
+    container.addEventListener('mousemove', function(e) {
+      const rect = container.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      zoomView.style.display = 'block';
+      zoomView.style.backgroundImage = `url('${mainImage.src}')`;
+
+      const percentX = x / rect.width * 100;
+      const percentY = y / rect.height * 100;
+      zoomView.style.backgroundPosition = `${percentX}% ${percentY}%`;
+    });
+
+    container.addEventListener('mouseleave', function() {
+      zoomView.style.display = 'none';
+    });
+
+    function setMainImage(src) {
+      mainImage.src = src;
+      zoomView.style.backgroundImage = `url('${src}')`;
+    }
+  </script>
+</body>
+</html>

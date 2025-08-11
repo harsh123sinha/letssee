@@ -1,0 +1,264 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Exo:700');
+@import url('https://fonts.googleapis.com/css?family=Abel');
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(45deg, #a4150a, #000000);
+  color: #ffffff;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(45deg, #a4150a, #000000);
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo img {
+  width: 80px;
+  height: auto;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+/* Active and Hover Effect */
+.nav-item:hover,
+.nav-item.active {
+  background: crimson;
+  color: white;
+}
+
+/* Add specific active state styles for .back-btn */
+.back-btn.active {
+  background: crimson;
+  color: white;
+}
+
+/* Mobile Menu */
+.nav-links.show {
+    display: flex;
+    flex-direction: column;
+    background: #111;
+    position: absolute;
+    top: 70px;
+    right: 6px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 16%;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #111;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 80%;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+    color: #ffffff;
+  }
+
+  /* Make the menu vertical and full width on mobile */
+  .nav-links li {
+    margin: 10px 0;
+  }
+}
+
+.scroll-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.main-heading {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 40px;
+}
+
+.property-section {
+  margin-bottom: 40px;
+}
+
+.property-section h2 {
+  margin-left: 40px;
+  font-size: 30px;
+  color: #ffffff;
+}
+
+/* WhatsApp Button */
+.whatsapp-btn {
+  background-color: #25D366;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  margin-top: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.whatsapp-btn:hover {
+  background-color: #1ebe5d;
+  color: white;
+  text-decoration: none;
+}
+
+.whatsapp-btn i {
+  font-size: 18px;
+}
+
+/* Property Cards */
+.card-row {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+}
+
+.card {
+    min-width: 200px;
+    max-width: 200px;
+    background: #fff;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    flex-shrink: 0;
+    color: #000000;
+    position: relative;
+  }
+.card .price {
+    color: #ad0400;
+    margin-top: 20px;
+    margin-left: 1px;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.card .location {
+    color: #160080;
+    margin-top: 7px;
+    margin-left: -2px;
+    font-size: 19px;
+    font-family: 'Times New Roman', Times, serif;
+}
+ .card .description {
+    color: #00396b;
+    margin-top: 2px;
+    margin-left: 6px;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    max-width: 158px;
+}
+.card .description {
+    font-size: 15px;
+    color: #a00077;
+    margin-top: 4px;
+    text-align: left;
+    margin-left: 0px;
+    font-family: 'Times New Roman', Times, serif;
+}
+  .card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+
+.card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* Scroll Buttons */
+.scroll-btn {
+  background-color: #444;
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.scroll-btn:hover {
+  opacity: 1;
+}
+
+.scroll-btn.left {
+  left: 0;
+}
+
+.scroll-btn.right {
+  right: 0;
+}
+
+.scroll-btn:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
