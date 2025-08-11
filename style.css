@@ -536,20 +536,27 @@ body {
   .signup-card {
     width: 90%;
   }
+ 
 
   h1 {
     font-size: 1.6em;
   }
-
+.slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 33px;
+    padding: 9px;
+    width: 100%;
+    scroll-snap-type: x mandatory;
+    margin-left: 10%;
+}
   .signup-card h3 {
     font-size: 1.1em;
   }
 
   .signup-card p {
     font-size: 0.85em;
-  }
-  .slider{
-    margin-left:30px;
   }
     .signup-card.middle {
     transform: translateY(25%); /* Initially below the screen */
@@ -2573,7 +2580,7 @@ h3 {
     .menu-toggle {
         display: block;
         color: #e8e8e8;
-        margin-right: 29px;
+        margin-right: -8px;
     }
 
   .slide-buttons {
@@ -2611,11 +2618,9 @@ h3 {
     margin: 10px 0;
   }
 
-    .menu-toggle {
-        display: block;
-        color: #e8e8e8;
-        margin-right: -38px;
-    }
+  .menu-toggle {
+    display: block;
+  }
 
   .cards {
     flex-direction: column;
@@ -3081,7 +3086,7 @@ h3 {
   display: flex;
   overflow-x: auto;
   scroll-behavior: smooth;
-  gap: 20px;
+  gap: 35px;
   padding: 10px;
   width: 100%;
   scroll-snap-type: x mandatory;
@@ -3151,7 +3156,7 @@ h3 {
 
 @media screen and (max-width: 480px) {
   .property-card {
-    width: 112%;
+    width: 90%;
   }
 }
 /* General reset for box-sizing */
