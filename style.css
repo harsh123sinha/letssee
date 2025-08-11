@@ -2682,18 +2682,18 @@ h3 {
 @media (max-width: 768px) {
 
   /* Stack Buy + Others buttons */
-  .slide-buttons {
-    /* flex-direction: row; */
-    /* align-items: center; */
-    gap: 10px;
-    margin: 10px 0;
-  }
-
+    .slide-buttons {
+        /* flex-direction: row; */
+        /* align-items: center; */
+        gap: 7px;
+        margin: 10px 0;
+    }
   
-    .slide-buttons button {
-        width: 88px;
-        font-size: 12px;
-        text-align:center;}
+  .slide-buttons button {
+        width: 79px;
+        font-size: 9px;
+        text-align: center;
+    }
   /* Adjust search box layout */
   .search-container {
     flex-direction: column;
