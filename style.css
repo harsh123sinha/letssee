@@ -548,6 +548,14 @@ body {
   .signup-card p {
     font-size: 0.85em;
   }
+    .signup-card.middle {
+    transform: translateY(50%); /* Initially below the screen */
+    transition: transform 1s ease-out, opacity 1s ease-out;
+  }
+
+  .signup-card.middle.visible {
+    transform: translateY(0); /* Moves up into position */
+  }
 }
 
 
