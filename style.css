@@ -549,7 +549,7 @@ body {
     font-size: 0.85em;
   }
     .signup-card.middle {
-    transform: translateY(50%); /* Initially below the screen */
+    transform: translateY(25%); /* Initially below the screen */
     transition: transform 1s ease-out, opacity 1s ease-out;
   }
 
