@@ -2600,9 +2600,11 @@ h3 {
     margin: 10px 0;
   }
 
-  .menu-toggle {
-    display: block;
-  }
+    .menu-toggle {
+        display: block;
+        color: #e8e8e8;
+        margin-right: -38px;
+    }
 
   .cards {
     flex-direction: column;
