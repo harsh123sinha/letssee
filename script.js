@@ -1,36 +1,27 @@
 document.addEventListener('DOMContentLoaded', () => {
     let slideIndex = 0;
-    const cards = document.querySelectorAll('.signup-card');
-    const totalCards = cards.length;
-    const container = document.querySelector('.signup-cards');
-    
     showSlides();
 
     // Show slides function
     function showSlides() {
-        for (let i = 0; i < totalCards; i++) {
-            cards[i].style.display = "none"; // Hide all cards initially
+        const slides = document.getElementsByClassName("slide");
+        for (let slide of slides) {
+            slide.style.display = "none";
         }
-
         slideIndex++;
-        if (slideIndex > totalCards) slideIndex = 1;
-        
-        if (cards[slideIndex - 1]) {
-            cards[slideIndex - 1].style.display = "block"; // Show the current card
-        }
-
-        // Auto-slide after 3 seconds (adjust as necessary)
-        setTimeout(showSlides,0);
+        if (slideIndex > slides.length) slideIndex = 1;
+        if (slides[slideIndex - 1]) slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 2000);
     }
 
-    // Mobile view card slide functionality for full-width on small screens
+    // Mobile menu toggle for responsive design
     const menuToggle = document.querySelector(".menu-toggle");
     const navLinks = document.querySelector(".nav-links");
 
     menuToggle.addEventListener("click", () => {
         navLinks.classList.toggle("show");
     });
-    
+
     // Active class for navigation items
     const navItems = document.querySelectorAll(".nav-item");
     navItems.forEach(item => {
@@ -39,16 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
             item.classList.add("active");
         });
     });
-
-    // Function to toggle full width for sliding when the screen is small
-    if (window.innerWidth < 480) {
-        container.style.overflowX = 'scroll';
-        container.style.display = 'flex';
-        container.style.flexDirection = 'row';
-        cards.forEach(card => {
-            card.style.flex = '0 0 auto'; // Ensures cards don’t shrink when sliding
-        });
-    }
 });
 
 // Scroll left and right functions, accepting the scroll container ID
