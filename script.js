@@ -1,27 +1,36 @@
 document.addEventListener('DOMContentLoaded', () => {
     let slideIndex = 0;
+    const cards = document.querySelectorAll('.signup-card');
+    const totalCards = cards.length;
+    const container = document.querySelector('.signup-cards');
+    
     showSlides();
 
     // Show slides function
     function showSlides() {
-        const slides = document.getElementsByClassName("slide");
-        for (let slide of slides) {
-            slide.style.display = "none";
+        for (let i = 0; i < totalCards; i++) {
+            cards[i].style.display = "none"; // Hide all cards initially
         }
+
         slideIndex++;
-        if (slideIndex > slides.length) slideIndex = 1;
-        if (slides[slideIndex - 1]) slides[slideIndex - 1].style.display = "block";
-        setTimeout(showSlides, 1000);
+        if (slideIndex > totalCards) slideIndex = 1;
+        
+        if (cards[slideIndex - 1]) {
+            cards[slideIndex - 1].style.display = "block"; // Show the current card
+        }
+
+        // Auto-slide after 3 seconds (adjust as necessary)
+        setTimeout(showSlides,0);
     }
 
-    // Mobile menu toggle for responsive design
+    // Mobile view card slide functionality for full-width on small screens
     const menuToggle = document.querySelector(".menu-toggle");
     const navLinks = document.querySelector(".nav-links");
 
     menuToggle.addEventListener("click", () => {
         navLinks.classList.toggle("show");
     });
-
+    
     // Active class for navigation items
     const navItems = document.querySelectorAll(".nav-item");
     navItems.forEach(item => {
@@ -30,6 +39,16 @@ document.addEventListener('DOMContentLoaded', () => {
             item.classList.add("active");
         });
     });
+
+    // Function to toggle full width for sliding when the screen is small
+    if (window.innerWidth < 480) {
+        container.style.overflowX = 'scroll';
+        container.style.display = 'flex';
+        container.style.flexDirection = 'row';
+        cards.forEach(card => {
+            card.style.flex = '0 0 auto'; // Ensures cards don’t shrink when sliding
+        });
+    }
 });
 
 // Scroll left and right functions, accepting the scroll container ID
@@ -177,28 +196,5 @@ document.addEventListener("DOMContentLoaded", function() {
         imgElement.src = images[index]; // Change to the next image
     }, 2000); // 2000ms = 2 seconds
 });
-  function togglePropertyType() {
-    const propertyType = document.querySelector("select[name='type']").value;
-    const bhkDropdown = document.getElementById("bhk-options");
-    const kathaDropdown = document.getElementById("katha-options");
-    const otherTypeDropdown = document.getElementById("other-options");
-
-    // Reset visibility of all dropdowns
-    bhkDropdown.style.display = "none";    // Initially hide BHK
-    kathaDropdown.style.display = "none";  // Initially hide Katha
-    otherTypeDropdown.style.display = "none"; // Initially hide Other Type dropdown
-
-    // Show the relevant dropdown based on property type selection
-    if (propertyType === "plot") {
-      // Show Katha dropdown when Plot is selected
-      kathaDropdown.style.display = "block";
-    } else if (propertyType === "other") {
-      // Show Other Type dropdown when Other is selected
-      otherTypeDropdown.style.display = "block";
-    } else {
-      // Show BHK dropdown for Rent/Buy types
-      bhkDropdown.style.display = "block";
-    }
-  }
 
 // Typing effect for Hindi and English text
